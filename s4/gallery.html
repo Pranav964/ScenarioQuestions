@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <div class="gallery">
+        <img src="image1.jpg" alt="Image 1" class="thumbnail" onclick="openLightbox('image1.jpg')">
+        <img src="image2.jpg" alt="Image 2" class="thumbnail" onclick="openLightbox('image2.jpg')">
+        <img src="image2.jpg" alt="Image 2" class="thumbnail" onclick="openLightbox('image2.jpg')">
+    
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+        <span class="next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

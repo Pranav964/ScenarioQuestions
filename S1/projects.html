@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <section id="projects-intro">
+        <h1>My Projects</h1>
+        <p>Below is a list of projects I have completed. Each project showcases different skills and technologies.</p>
+    </section>
+    
+    <section id="projects-list">
+        <h2>Completed Projects</h2>
+        <div class="project">
+            <h3>Zomato Clone</h3>
+            <p><strong>Technologies:</strong> HTML, CSS</p>
+            <p>A clone of the popular food delivery service Zomato, built using HTML and CSS.</p>
+        </div>
+        <div class="project">
+            <h3>Book Record Management</h3>
+            <p><strong>Technologies:</strong> Backend tech, Postman, MongoDB</p>
+            <p>A system for managing book records, utilizing a backend server, MongoDB for the database, and Postman for API testing.</p>
+        </div>
+        <div class="project">
+            <h3>Tasky Application</h3>
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+            <p>An application for managing tasks, implemented with HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project">
+            <h3>Library Management System</h3>
+            <p><strong>Technologies:</strong> Backend tech, MongoDB</p>
+            <p>A comprehensive library management system using backend technologies and MongoDB as the database.</p>
+        </div>
+        <div class="project">
+            <h3>Movie Browser Website</h3>
+            <p><strong>Technologies:</strong> React</p>
+            <p>A movie browsing website built using React, providing a dynamic and interactive user experience.</p>
+        </div>
+        <div class="project">
+            <h3>Employee Management System</h3>
+            <p><strong>Technologies:</strong> HTML, CSS, Java, MySQL, Spring Boot</p>
+            <p>An employee management system implemented with HTML, CSS, Java, MySQL, and Spring Boot.</p>
+        </div>
+        <div class="project">
+            <h3>Library Management System (Spring Boot)</h3>
+            <p><strong>Technologies:</strong> HTML, CSS, Java, MySQL, Spring Boot</p>
+            <p>A library management system developed using Spring Boot, HTML, CSS, Java, and MySQL.</p>
+        </div>
+        <div class="project">
+            <h3>E-Commerce Product Website</h3>
+            <p><strong>Technologies:</strong> Java, MySQL</p>
+            <p>An e-commerce website for managing products, built with Java and MySQL.</p>
+        </div>
+    </section>
+    
+    <section id="projects-chart">
+        <h2>Project Distribution</h2>
+        <canvas id="projectsPieChart"></canvas>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pranav. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Pie chart data
+        const ctx = document.getElementById('projectsPieChart').getContext('2d');
+        const projectsPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['HTML/CSS', 'Backend (MongoDB)', 'JavaScript', 'React', 'Java/Spring Boot', 'MySQL'],
+                datasets: [{
+                    label: 'Project Distribution',
+                    data: [3, 2, 1, 1, 3, 2], // Number of projects using each technology
+                    backgroundColor: [
+                        '#FF6384',
+                        '#36A2EB',
+                        '#FFCE56',
+                        '#4BC0C0',
+                        '#9966FF',
+                        '#FF9F40'
+                    ],
+                    borderColor: '#fff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw + ' Projects';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

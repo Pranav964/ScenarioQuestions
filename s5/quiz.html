@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <form id="quiz-form">
+            <div class="question">
+                <p>1 Which of the following is the correct name of React.js?</p>
+                <label><input type="radio" name="q1" value="React"> React</label>
+                <label><input type="radio" name="q1" value="react js"> react js</label>
+                <label><input type="radio" name="q1" value="React.js"> React.js</label>
+                <label><input type="radio" name="q1" value="All"> All</label>
+            </div>
+            <div class="question">
+                <p> 2 What of the following is used in React.js to increase performance?</p>
+                <label><input type="radio" name="q2" value="Original DOM"> Original DOM</label>
+                <label><input type="radio" name="q2" value="Virtual DOM"> Virtual DOM</label>
+                <label><input type="radio" name="q2" value="Both A And B"> Both A And B</label>
+                <label><input type="radio" name="q2" value=" none of this"> none of this </label>
+            </div>
+            <div class="question">
+                <p> 3 How many numbers of elements a valid react component can return?</p>
+                <label><input type="radio" name="q3" value="1"> 1</label>
+                <label><input type="radio" name="q3" value="2"> 2</label>
+                <label><input type="radio" name="q3" value="3"> 3</label>
+                <label><input type="radio" name="q3" value="4"> 4 </label>
+            </div>
+            <div class="question">
+                <p> 4 How many ways of defining your variables in ES6?</p>
+                <label><input type="radio" name="q4" value="1"> 1</label>
+                <label><input type="radio" name="q4" value="3"> 3</label>
+                <label><input type="radio" name="q4" value="4"> 4</label>
+                <label><input type="radio" name="q4" value="5"> 5 </label>
+            </div>
+            <button type="button" onclick="submitQuiz()">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>

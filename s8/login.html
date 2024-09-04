@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1 id="login-heading">Login</h1>
+        <form id="login-form" onsubmit="return validateForm()" aria-labelledby="login-heading">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" aria-describedby="username-error">
+                <span class="error" id="username-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" aria-describedby="password-error">
+                <span class="error" id="password-error" role="alert"></span>
+            </div>
+            <button type="submit">Login</button>
+            <button type="reset">Reset</button>
+        </form>
+        <div class="loading-spinner" id="loading-spinner"></div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3> What is JSX?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>JSX is a syntax extension of JavaScript. It is used with React to describe what the user interface should look like. By using JSX, we can write HTML structures in the same file that contains JavaScript code.
+
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>Can web browsers read JSX directly?</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Web browsers cannot read JSX directly. This is because they are built to only read regular JS objects and JSX is not a regular JavaScript object 
+                    For a web browser to read a JSX file, the file needs to be transformed into a regular JavaScript object. For this, we use Babel</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>What is the virtual DOM?
+                </h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>DOM stands for Document Object Model. The DOM represents an HTML document with a logical tree structure. Each branch of the tree ends in a node, and each node contains objects.
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="faq.js"></script>
+</body>
+</html>
